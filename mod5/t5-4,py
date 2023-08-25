@@ -1,0 +1,9 @@
+cities = []
+
+for i in range(5):
+    city = input("Anna kaupunki: ")
+    
+    cities.append(city)
+
+for city in cities:
+    print(city)
