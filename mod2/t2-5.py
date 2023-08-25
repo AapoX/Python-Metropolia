@@ -17,7 +17,7 @@ luoti = luoti * luotip
 total = leivisko + naula + luoti
 gr, kg = math.modf(total)
 
-
+ 
 
 
 
