@@ -4,31 +4,33 @@ dictio = {"lentoasemat":[], "icao":[]}
 
 while True:
     
-    task = input("Mitä haluaisit tehdä?: Haku, Lisäys tai Lopetus:")
+    task = input("Mitä haluaisit tehdä?: Haku[2], Lisäys[1] tai Lopetus[0]:")
     
     
-    if task == "Lisäys":
+    if task == "1":
         print("Anna tyhjä ICAO-koodi lopettaaksesi lisäyksen.")
-        while True:
-            icaokoodi = input("Anna ICAO-koodi: ")
+        icaokoodi = input("Anna ICAO-koodi: ")
+        
+        if icaokoodi in dictio["icao"] or len(icaokoodi) > 4:
+            print("Koodi on jo listalla tai ICAO-koodi ei toimi.")
+        else:
             dictio["icao"].append(icaokoodi)
             lentoasema = input("Anna lentoaseman nimi: ")
-            if icaokoodi or lentoasema == "":
-                break
-            dictio["lentoasemat"].append(lentoasema)
+            if lentoasema in dictio["lentoasemat"]:
+                print("Lentoasema on jo listalla.")
+            else:
+                dictio["lentoasemat"].append(lentoasema)
+            
+        
         
     
-    elif task == "Haku":
+    elif task == "2":
         print("Anna tyhjä ICAO-koodi lopettaaksesi haun.")
-        while True:
-            icaokoodih = input("Anna ICAO-koodi: ")
-            if icaokoodih in dictio["icao"]:
-                print(dictio["lentoasemat"][dictio["icao"].index(icaokoodih)])
+        icaokoodih = input("Anna ICAO-koodi: ")
+        if icaokoodih in dictio["icao"]:
+            print(dictio["lentoasemat"][dictio["icao"].index(icaokoodih)])
                 
-            elif icaokoodih == "":
-                break
-    
-    elif task == "Lopetus":
+    elif task == "0":
         print("Kiitos käytöstä!")
         break
     
