@@ -16,10 +16,7 @@ while True:
         else:
             dictio["icao"].append(icaokoodi)
             lentoasema = input("Anna lentoaseman nimi: ")
-            if lentoasema in dictio["lentoasemat"]:
-                print("Lentoasema on jo listalla.")
-            else:
-                dictio["lentoasemat"].append(lentoasema)
+            dictio["lentoasemat"].append(lentoasema)
             
         
         
