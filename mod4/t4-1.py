@@ -1,4 +1,4 @@
-num = 1
+num = 3
 
 while (num < 1000):
     if (num % 3 == 0):
