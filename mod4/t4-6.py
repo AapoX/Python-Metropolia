@@ -4,12 +4,12 @@ def plikiarvo(pisteet):
     x = random.uniform(1, -1)
     y = random.uniform(1, -1)
     
-    pys = 0
+    i = 0
     
     if x**2 + y**2 <= 1:
-        pys += 1
+        i += 1
         
-    plikiarvo = 4 * pys / pisteet
+    plikiarvo = 4 * i / pisteet
     return plikiarvo
 
 def main():
