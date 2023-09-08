@@ -8,7 +8,7 @@ def arpa():
 def main():
     while True:
         roll = arpa()
-        print(f"{roll}")
+        print(roll)
         if roll == 6:
             break
         

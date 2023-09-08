@@ -5,5 +5,5 @@ for i in range(5):
     
     cities.append(city)
 
-for city in cities:
-    print(city)
+for i in cities:
+    print(i)

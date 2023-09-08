@@ -9,7 +9,7 @@ def main():
     puolia = int(input("Anna kuinka monta puolikasta arvassa on: "))
     while True:
         roll = arpa(puolia)
-        print(f"{roll}")
+        print(roll)
         if roll == puolia:
             break
         
