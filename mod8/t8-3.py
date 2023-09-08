@@ -10,6 +10,7 @@ connection = mysql.connector.connect(
     autocommit=True
 )
 
+
 def haeKoordinaatit(maak):
     sql = "SELECT latitude_deg, longitude_deg FROM airport"
     sql += " WHERE ident = '" + maak + "'"

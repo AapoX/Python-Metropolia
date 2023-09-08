@@ -9,6 +9,7 @@ connection = mysql.connector.connect(
          autocommit=True
          )
 
+
 def haeMaakoodi(maak):
     sql = "SELECT type, COUNT(type) FROM airport "
     sql += "WHERE iso_country = '" + maak + "' "

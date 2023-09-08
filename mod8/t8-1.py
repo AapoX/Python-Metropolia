@@ -20,5 +20,6 @@ def haeMaakoodi(maak):
             print(i[1])
     return
 
+
 maak = input("Anna ICAO: ")
 haeMaakoodi(maak)
