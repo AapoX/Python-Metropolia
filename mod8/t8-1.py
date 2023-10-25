@@ -10,14 +10,14 @@ connection = mysql.connector.connect(
          )
 
 def haeMaakoodi(maak):
-    sql = "SELECT name, iso_region FROM airport "
+    sql = "SELECT name, iso_region, type FROM airport "
     sql += " WHERE ident = '" + maak + "' "
     kursori = connection.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
     if kursori.rowcount >0:
         for i in tulos:
-            print(i[1])
+            print(i)
     return
 
 
